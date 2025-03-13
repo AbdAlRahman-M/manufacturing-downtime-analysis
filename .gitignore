@@ -1,0 +1,6 @@
+~$*.xls?
+~$*.doc?
+~$*.ppt?
+*/ipynb_checkpoints/
+*-checkpoint.ipynb
+*.twbr
