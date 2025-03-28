@@ -1,10 +1,10 @@
 # Manufacturing Downtime Analysis
 
-## Project Overview
+## 🟢 Project Overview
 
 This project is part of a data analysis course and aims to analyze manufacturing downtime in a soda drink factory. The analysis will cover data cleaning, exploratory analysis, forecasting, and visualization.
 
-## Project Phases and Deliverables
+## 🟢 Project Phases and Deliverables
 
 ### Phase I: Data Cleaning and Modelling
 
@@ -55,32 +55,32 @@ This project is part of a data analysis course and aims to analyze manufacturing
 - Project final report.
 - Project final presentation.
 
-## Repository Structure
+## 🟢 Repository Structure
 
-```plaintext
-manufacturing-downtime-analysis
-├─ phase-1
-|  ├─ clean_data.xlsx
-|  └─ data_cleaning.ipynb
-├─ phase-2
-|  ├─ analysis_questions.docx
-|  ├─ exploratory_analysis.ipynb
-|  └─ exploratory_analysis.sql
-├─ phase-3
-|  ├─ forecasting.ipynb
-|  └─ forecasting_questions.docx
-├─ phase-4
-|  ├─ presentation.pptx
-|  └─ report.docx
-├─ source-data
-|  ├─ data_dictionary.csv
-|  └─ manufacturing_line_productivity.xlsx
-├─ .gitignore
-├─ README.md
-└─ requirements.txt
+```
+📁 manufacturing-downtime-analysis
+├─ 📁 phase-1
+|   ├─ 📃 clean_data.xlsx
+|   └─ 📃 data_cleaning.ipynb
+├─ 📁 phase-2
+|   ├─ 📃 analysis_questions.docx
+|   ├─ 📃 exploratory_analysis.ipynb
+|   └─ 📃 exploratory_analysis.sql
+├─ 📁 phase-3
+|   ├─ 📃 forecasting.ipynb
+|   └─ 📃 forecasting_questions.docx
+├─ 📁 phase-4
+|   ├─ 📃 presentation.pptx
+|   └─ 📃 report.docx
+├─ 📁 source-data
+|   ├─ 📃 data_dictionary.csv
+|   └─ 📃 manufacturing_line_productivity.xlsx
+├─ 📃 .gitignore
+├─ 📃 README.md
+└─ 📃 requirements.txt
 ```
 
-## Technologies Used
+## 🟢 Technologies Used
 
 - Jupyter Notebook
 - NumPy
@@ -92,7 +92,7 @@ manufacturing-downtime-analysis
 - Seaborn
 - Tableau
 
-## Getting Started
+## 🟢 Getting Started
 
 1. **Clone the repository:**
 
@@ -114,9 +114,9 @@ pip install -r requirements.txt
 
 4. **Run the Jupyter notebooks for data cleaning, analysis, and forecasting**
 
-## Contributors
+## 🟢 Contributors
 
 - [Abd Al-Rahman Mohamed Amin](https://github.com/AbdAlRahman-M)
 - Ahmed Mohamed
-- Mohamed Shebl Azab
+- [Mohamed Shebl Azab](https://github.com/Shebl83)
 - Omar Mohamed Shebl
