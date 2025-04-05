@@ -61,7 +61,8 @@ This project is part of a data analysis course and aims to analyze manufacturing
 📁 manufacturing-downtime-analysis
 ├─ 📁 phase-1
 |   ├─ 📃 clean_data.xlsx
-|   └─ 📃 data_cleaning.ipynb
+    ├─ 📃 data_cleaning.ipynb
+|   └─ 🖼️ ERD.jpg
 ├─ 📁 phase-2
 |   ├─ 📃 analysis_questions.docx
 |   ├─ 📃 exploratory_analysis.ipynb
@@ -85,9 +86,13 @@ This project is part of a data analysis course and aims to analyze manufacturing
 - Jupyter Notebook
 - NumPy
 - Matplotlib
+- Microsoft Excel.
 - Microsoft Word
 - Microsoft PowerPoint
+- Microsoft SQL Server.
+- Microsoft SQL Server Management Studio.
 - Pandas
+- Prophet (a Python package for predictive modelling)
 - Python
 - Seaborn
 - Tableau
