@@ -13,11 +13,13 @@
     <IntuitiveSorting_SP2 />
     <MarkAnimation />
     <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
     <ObjectModelTableType />
     <SchemaViewerObjectModel />
     <SetMembershipControl />
     <SheetIdentifierTracking />
     <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
     <WindowsPersistSimpleIdentifiers />
     <WorksheetBackgroundTransparency />
     <ZoneBackgroundTransparency />
@@ -727,6 +729,393 @@
           <groupfilter function='level-members' level='[none:Operator_Error:nk]' />
         </groupfilter>
       </group>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/DELL/OneDrive/Dokumenter/GitHub/manufacturing-downtime-analysis/phase-4/Dashboard.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='04/28/2025 08:42:04 PM' username='tableau_internal_user'>
+          <relation type='collection'>
+            <relation name='Line!productivity_889374F6ADBF44BDAD658BF766055614' table='[Extract].[Line!productivity_889374F6ADBF44BDAD658BF766055614]' type='table' />
+            <relation name='Calender_9216F60309CD43C6A83A246DA9D17F6E' table='[Extract].[Calender_9216F60309CD43C6A83A246DA9D17F6E]' type='table' />
+            <relation name='Line!downtime_499D3CC96110434DAF08421805F3BC05' table='[Extract].[Line!downtime_499D3CC96110434DAF08421805F3BC05]' type='table' />
+            <relation name='Downtime!factors_285F17CC32754317822B6EB975965016' table='[Extract].[Downtime!factors_285F17CC32754317822B6EB975965016]' type='table' />
+            <relation name='Products_6F6923D553EE4CC48AD86E9912C38D00' table='[Extract].[Products_6F6923D553EE4CC48AD86E9912C38D00]' type='table' />
+            <relation name='Product!details_000B5F0ADC294FE08B0EEAD2232519BE' table='[Extract].[Product!details_000B5F0ADC294FE08B0EEAD2232519BE]' type='table' />
+          </relation>
+          <cols>
+            <map key='[Batch (Line!downtime)]' value='[Line!downtime_499D3CC96110434DAF08421805F3BC05].[Batch]' />
+            <map key='[Batch]' value='[Line!productivity_889374F6ADBF44BDAD658BF766055614].[Batch]' />
+            <map key='[Date (Calender)]' value='[Calender_9216F60309CD43C6A83A246DA9D17F6E].[Date]' />
+            <map key='[Date]' value='[Line!productivity_889374F6ADBF44BDAD658BF766055614].[Date]' />
+            <map key='[Day_Name]' value='[Calender_9216F60309CD43C6A83A246DA9D17F6E].[Day_Name]' />
+            <map key='[Description]' value='[Downtime!factors_285F17CC32754317822B6EB975965016].[Description]' />
+            <map key='[End_Time]' value='[Line!productivity_889374F6ADBF44BDAD658BF766055614].[End_Time]' />
+            <map key='[Factor (Downtime!factors)]' value='[Downtime!factors_285F17CC32754317822B6EB975965016].[Factor]' />
+            <map key='[Factor]' value='[Line!downtime_499D3CC96110434DAF08421805F3BC05].[Factor]' />
+            <map key='[Flavor]' value='[Products_6F6923D553EE4CC48AD86E9912C38D00].[Flavor]' />
+            <map key='[Min_Batch_Time]' value='[Product!details_000B5F0ADC294FE08B0EEAD2232519BE].[Min_Batch_Time]' />
+            <map key='[Minutes]' value='[Line!downtime_499D3CC96110434DAF08421805F3BC05].[Minutes]' />
+            <map key='[Month]' value='[Calender_9216F60309CD43C6A83A246DA9D17F6E].[Month]' />
+            <map key='[Month_Name]' value='[Calender_9216F60309CD43C6A83A246DA9D17F6E].[Month_Name]' />
+            <map key='[Operator]' value='[Line!productivity_889374F6ADBF44BDAD658BF766055614].[Operator]' />
+            <map key='[Operator_Error]' value='[Downtime!factors_285F17CC32754317822B6EB975965016].[Operator_Error]' />
+            <map key='[Product (Products)]' value='[Products_6F6923D553EE4CC48AD86E9912C38D00].[Product]' />
+            <map key='[Product]' value='[Line!productivity_889374F6ADBF44BDAD658BF766055614].[Product]' />
+            <map key='[Quarter]' value='[Calender_9216F60309CD43C6A83A246DA9D17F6E].[Quarter]' />
+            <map key='[Size]' value='[Product!details_000B5F0ADC294FE08B0EEAD2232519BE].[Size]' />
+            <map key='[Size_In_ml]' value='[Products_6F6923D553EE4CC48AD86E9912C38D00].[Size_In_ml]' />
+            <map key='[Start_Time]' value='[Line!productivity_889374F6ADBF44BDAD658BF766055614].[Start_Time]' />
+            <map key='[Week_of_Month]' value='[Calender_9216F60309CD43C6A83A246DA9D17F6E].[Week_of_Month]' />
+            <map key='[Year]' value='[Calender_9216F60309CD43C6A83A246DA9D17F6E].[Year]' />
+          </cols>
+          <refresh>
+            <refresh-event add-from-file-path='Line_productivity+ (manufacturing_line_productivity_Final)' increment-value='%null%' refresh-type='create' rows-inserted='125' timestamp-start='2025-04-28 20:42:01.368' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Batch</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Batch]</local-name>
+              <parent-name>[Line!productivity_889374F6ADBF44BDAD658BF766055614]</parent-name>
+              <remote-alias>Batch</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Line_productivity</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>38</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Line!productivity_889374F6ADBF44BDAD658BF766055614]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Operator</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Operator]</local-name>
+              <parent-name>[Line!productivity_889374F6ADBF44BDAD658BF766055614]</parent-name>
+              <remote-alias>Operator</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Line_productivity</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Line!productivity_889374F6ADBF44BDAD658BF766055614]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Date]</local-name>
+              <parent-name>[Line!productivity_889374F6ADBF44BDAD658BF766055614]</parent-name>
+              <remote-alias>Date</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Line_productivity</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Line!productivity_889374F6ADBF44BDAD658BF766055614]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Start_Time</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[Start_Time]</local-name>
+              <parent-name>[Line!productivity_889374F6ADBF44BDAD658BF766055614]</parent-name>
+              <remote-alias>Start_Time</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Line_productivity</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>37</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Line!productivity_889374F6ADBF44BDAD658BF766055614]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>End_Time</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[End_Time]</local-name>
+              <parent-name>[Line!productivity_889374F6ADBF44BDAD658BF766055614]</parent-name>
+              <remote-alias>End_Time</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Line_productivity</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>38</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Line!productivity_889374F6ADBF44BDAD658BF766055614]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Product</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Product]</local-name>
+              <parent-name>[Line!productivity_889374F6ADBF44BDAD658BF766055614]</parent-name>
+              <remote-alias>Product</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Line_productivity</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Line!productivity_889374F6ADBF44BDAD658BF766055614]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Date (Calender)]</local-name>
+              <parent-name>[Calender_9216F60309CD43C6A83A246DA9D17F6E]</parent-name>
+              <remote-alias>Date</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Calender</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Calender_9216F60309CD43C6A83A246DA9D17F6E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Year]</local-name>
+              <parent-name>[Calender_9216F60309CD43C6A83A246DA9D17F6E]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Calender</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Calender_9216F60309CD43C6A83A246DA9D17F6E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Month</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Month]</local-name>
+              <parent-name>[Calender_9216F60309CD43C6A83A246DA9D17F6E]</parent-name>
+              <remote-alias>Month</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Calender</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Calender_9216F60309CD43C6A83A246DA9D17F6E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Quarter</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Quarter]</local-name>
+              <parent-name>[Calender_9216F60309CD43C6A83A246DA9D17F6E]</parent-name>
+              <remote-alias>Quarter</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Calender</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Calender_9216F60309CD43C6A83A246DA9D17F6E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Week_of_Month</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Week_of_Month]</local-name>
+              <parent-name>[Calender_9216F60309CD43C6A83A246DA9D17F6E]</parent-name>
+              <remote-alias>Week_of_Month</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Calender</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Calender_9216F60309CD43C6A83A246DA9D17F6E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Day_Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Day_Name]</local-name>
+              <parent-name>[Calender_9216F60309CD43C6A83A246DA9D17F6E]</parent-name>
+              <remote-alias>Day_Name</remote-alias>
+              <ordinal>11</ordinal>
+              <family>Calender</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Calender_9216F60309CD43C6A83A246DA9D17F6E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Month_Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Month_Name]</local-name>
+              <parent-name>[Calender_9216F60309CD43C6A83A246DA9D17F6E]</parent-name>
+              <remote-alias>Month_Name</remote-alias>
+              <ordinal>12</ordinal>
+              <family>Calender</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Calender_9216F60309CD43C6A83A246DA9D17F6E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Batch</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Batch (Line!downtime)]</local-name>
+              <parent-name>[Line!downtime_499D3CC96110434DAF08421805F3BC05]</parent-name>
+              <remote-alias>Batch</remote-alias>
+              <ordinal>13</ordinal>
+              <family>Line_downtime</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>35</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Line!downtime_499D3CC96110434DAF08421805F3BC05]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Factor</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Factor]</local-name>
+              <parent-name>[Line!downtime_499D3CC96110434DAF08421805F3BC05]</parent-name>
+              <remote-alias>Factor</remote-alias>
+              <ordinal>14</ordinal>
+              <family>Line_downtime</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Line!downtime_499D3CC96110434DAF08421805F3BC05]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Minutes</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Minutes]</local-name>
+              <parent-name>[Line!downtime_499D3CC96110434DAF08421805F3BC05]</parent-name>
+              <remote-alias>Minutes</remote-alias>
+              <ordinal>15</ordinal>
+              <family>Line_downtime</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>20</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Line!downtime_499D3CC96110434DAF08421805F3BC05]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Factor</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Factor (Downtime!factors)]</local-name>
+              <parent-name>[Downtime!factors_285F17CC32754317822B6EB975965016]</parent-name>
+              <remote-alias>Factor</remote-alias>
+              <ordinal>16</ordinal>
+              <family>Downtime_factors</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Downtime!factors_285F17CC32754317822B6EB975965016]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Description</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Description]</local-name>
+              <parent-name>[Downtime!factors_285F17CC32754317822B6EB975965016]</parent-name>
+              <remote-alias>Description</remote-alias>
+              <ordinal>17</ordinal>
+              <family>Downtime_factors</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Downtime!factors_285F17CC32754317822B6EB975965016]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Operator_Error</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Operator_Error]</local-name>
+              <parent-name>[Downtime!factors_285F17CC32754317822B6EB975965016]</parent-name>
+              <remote-alias>Operator_Error</remote-alias>
+              <ordinal>18</ordinal>
+              <family>Downtime_factors</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Downtime!factors_285F17CC32754317822B6EB975965016]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Product</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Product (Products)]</local-name>
+              <parent-name>[Products_6F6923D553EE4CC48AD86E9912C38D00]</parent-name>
+              <remote-alias>Product</remote-alias>
+              <ordinal>19</ordinal>
+              <family>Products</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Products_6F6923D553EE4CC48AD86E9912C38D00]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Flavor</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Flavor]</local-name>
+              <parent-name>[Products_6F6923D553EE4CC48AD86E9912C38D00]</parent-name>
+              <remote-alias>Flavor</remote-alias>
+              <ordinal>20</ordinal>
+              <family>Products</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Products_6F6923D553EE4CC48AD86E9912C38D00]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Size_In_ml</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Size_In_ml]</local-name>
+              <parent-name>[Products_6F6923D553EE4CC48AD86E9912C38D00]</parent-name>
+              <remote-alias>Size_In_ml</remote-alias>
+              <ordinal>21</ordinal>
+              <family>Products</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Products_6F6923D553EE4CC48AD86E9912C38D00]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Size</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Size]</local-name>
+              <parent-name>[Product!details_000B5F0ADC294FE08B0EEAD2232519BE]</parent-name>
+              <remote-alias>Size</remote-alias>
+              <ordinal>22</ordinal>
+              <family>Product_details</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Product!details_000B5F0ADC294FE08B0EEAD2232519BE]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Min_Batch_Time</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Min_Batch_Time]</local-name>
+              <parent-name>[Product!details_000B5F0ADC294FE08B0EEAD2232519BE]</parent-name>
+              <remote-alias>Min_Batch_Time</remote-alias>
+              <ordinal>23</ordinal>
+              <family>Product_details</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Product!details_000B5F0ADC294FE08B0EEAD2232519BE]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
       <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
       <style>
         <style-rule element='mark'>
@@ -892,6 +1281,9 @@
                 </columns>
               </relation>
             </properties>
+            <properties context='extract'>
+              <relation name='Calender_9216F60309CD43C6A83A246DA9D17F6E' table='[Extract].[Calender_9216F60309CD43C6A83A246DA9D17F6E]' type='table' />
+            </properties>
           </object>
           <object caption='Downtime_factors' id='Downtime!factors_285F17CC32754317822B6EB975965016'>
             <properties context=''>
@@ -903,6 +1295,9 @@
                 </columns>
               </relation>
             </properties>
+            <properties context='extract'>
+              <relation name='Downtime!factors_285F17CC32754317822B6EB975965016' table='[Extract].[Downtime!factors_285F17CC32754317822B6EB975965016]' type='table' />
+            </properties>
           </object>
           <object caption='Line_downtime' id='Line!downtime_499D3CC96110434DAF08421805F3BC05'>
             <properties context=''>
@@ -913,6 +1308,9 @@
                   <column datatype='integer' name='Minutes' ordinal='2' />
                 </columns>
               </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Line!downtime_499D3CC96110434DAF08421805F3BC05' table='[Extract].[Line!downtime_499D3CC96110434DAF08421805F3BC05]' type='table' />
             </properties>
           </object>
           <object caption='Line_productivity' id='Line!productivity_889374F6ADBF44BDAD658BF766055614'>
@@ -928,6 +1326,9 @@
                 </columns>
               </relation>
             </properties>
+            <properties context='extract'>
+              <relation name='Line!productivity_889374F6ADBF44BDAD658BF766055614' table='[Extract].[Line!productivity_889374F6ADBF44BDAD658BF766055614]' type='table' />
+            </properties>
           </object>
           <object caption='Product_details' id='Product!details_000B5F0ADC294FE08B0EEAD2232519BE'>
             <properties context=''>
@@ -937,6 +1338,9 @@
                   <column datatype='integer' name='Min_Batch_Time' ordinal='1' />
                 </columns>
               </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Product!details_000B5F0ADC294FE08B0EEAD2232519BE' table='[Extract].[Product!details_000B5F0ADC294FE08B0EEAD2232519BE]' type='table' />
             </properties>
           </object>
           <object caption='Products' id='Products_6F6923D553EE4CC48AD86E9912C38D00'>
@@ -948,6 +1352,9 @@
                   <column datatype='integer' name='Size_In_ml' ordinal='2' />
                 </columns>
               </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Products_6F6923D553EE4CC48AD86E9912C38D00' table='[Extract].[Products_6F6923D553EE4CC48AD86E9912C38D00]' type='table' />
             </properties>
           </object>
         </objects>
@@ -3656,8 +4063,8 @@
           </layout-options>
           <size maxheight='2100' minheight='2100' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='408' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='84000' id='407' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
+            <zone h='100000' id='412' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='411' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
                 <zone fixed-size='29' h='4625' id='20' type-v2='title' w='98400' x='800' y='1000'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -3768,13 +4175,13 @@
                     </zone-style>
                   </zone>
                   <zone fixed-size='106' h='18151' id='163' is-fixed='true' type-v2='layout-basic' w='98614' x='693' y='10788'>
-                    <zone h='18151' id='116' param='horz' type-v2='layout-flow' w='62400' x='693' y='10788'>
-                      <zone fixed-size='504' h='18151' id='117' is-fixed='true' param='horz' type-v2='layout-flow' w='62400' x='693' y='10788'>
-                        <zone fixed-size='541' h='18151' id='118' is-fixed='true' param='horz' type-v2='layout-flow' w='62400' x='693' y='10788' />
+                    <zone h='18151' id='116' param='horz' type-v2='layout-flow' w='62396' x='693' y='10788'>
+                      <zone fixed-size='504' h='18151' id='117' is-fixed='true' param='horz' type-v2='layout-flow' w='62396' x='693' y='10788'>
+                        <zone fixed-size='541' h='18151' id='118' is-fixed='true' param='horz' type-v2='layout-flow' w='62396' x='693' y='10788' />
                       </zone>
                     </zone>
-                    <zone h='18151' id='164' param='horz' type-v2='layout-flow' w='36214' x='63093' y='10788'>
-                      <zone fixed-size='418' h='18151' id='119' is-fixed='true' param='horz' type-v2='layout-flow' w='36214' x='63093' y='10788' />
+                    <zone h='18151' id='164' param='horz' type-v2='layout-flow' w='36218' x='63089' y='10788'>
+                      <zone fixed-size='418' h='18151' id='119' is-fixed='true' param='horz' type-v2='layout-flow' w='36218' x='63089' y='10788' />
                     </zone>
                   </zone>
                   <zone h='69691' id='7' param='horz' type-v2='layout-flow' w='98614' x='693' y='28939'>
@@ -3837,8 +4244,8 @@
           </layout-options>
           <size maxheight='1850' minheight='1850' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='272' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='84000' id='271' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
+            <zone h='100000' id='276' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97260' id='275' param='vert' type-v2='layout-flow' w='98614' x='693' y='1370'>
                 <zone fixed-size='47' h='9418' id='10' type-v2='title' w='98614' x='693' y='1370'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -3983,7 +4390,7 @@
         <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
           <zone h='97260' id='290' param='horz' type-v2='layout-flow' w='98614' x='693' y='1370'>
             <zone h='97260' id='83' type-v2='layout-basic' w='98614' x='693' y='1370'>
-              <zone h='43291' id='63' name='Line Chart' show-title='false' w='98614' x='693' y='55339'>
+              <zone h='43292' id='63' name='Line Chart' show-title='false' w='98614' x='693' y='55338'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -3991,7 +4398,7 @@
                   <format attr='margin' value='4' />
                 </zone-style>
               </zone>
-              <zone h='5353' id='86' name='Line Chart' param='[federated.1wtoffb0r0e0n71byg91202b6gce].[none:Date:qk]' type-v2='filter' values='database' w='98614' x='693' y='49986'>
+              <zone h='5353' id='86' name='Line Chart' param='[federated.1wtoffb0r0e0n71byg91202b6gce].[none:Date:qk]' type-v2='filter' values='database' w='98614' x='693' y='49985'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -3999,7 +4406,7 @@
                   <format attr='margin' value='4' />
                 </zone-style>
               </zone>
-              <zone fixed-size='69' h='5975' id='59' is-fixed='true' type-v2='title' w='98614' x='693' y='1370'>
+              <zone fixed-size='69' h='5974' id='59' is-fixed='true' type-v2='title' w='98614' x='693' y='1370'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -4007,7 +4414,7 @@
                   <format attr='margin' value='4' />
                 </zone-style>
               </zone>
-              <zone h='19890' id='283' name=' Total Work Time ' w='22789' x='693' y='10086'>
+              <zone h='19890' id='283' name=' Total Work Time ' w='22787' x='693' y='10085'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -4015,8 +4422,8 @@
                   <format attr='margin' value='4' />
                 </zone-style>
               </zone>
-              <zone h='39900' id='287' param='horz' type-v2='layout-flow' w='53024' x='46283' y='10086'>
-                <zone h='39900' id='288' name='downtime vary by work shifts' w='53024' x='46283' y='10086'>
+              <zone h='39900' id='287' param='horz' type-v2='layout-flow' w='53026' x='46281' y='10085'>
+                <zone h='39900' id='288' name='downtime vary by work shifts' w='53026' x='46281' y='10085'>
                   <layout-cache cell-count-w='3' minheight='177' type-h='scalable' type-w='cell' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -4026,7 +4433,7 @@
                   </zone-style>
                 </zone>
               </zone>
-              <zone h='19890' id='291' name='Average Downtime Per Day' w='22801' x='23482' y='10086'>
+              <zone h='19890' id='291' name='Average Downtime Per Day' w='22801' x='23480' y='10085'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -4034,7 +4441,7 @@
                   <format attr='margin' value='4' />
                 </zone-style>
               </zone>
-              <zone h='20010' id='292' name='# Batches' w='22801' x='23482' y='29976'>
+              <zone h='20010' id='292' name='# Batches' w='22801' x='23480' y='29975'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -4042,7 +4449,7 @@
                   <format attr='margin' value='4' />
                 </zone-style>
               </zone>
-              <zone h='20010' id='284' name='Total Downtime' w='22789' x='693' y='29976'>
+              <zone h='20010' id='284' name='Total Downtime' w='22787' x='693' y='29975'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -4082,9 +4489,9 @@
           </layout-options>
           <size maxheight='1550' minheight='1550' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='315' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='84000' id='314' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
-                <zone fixed-size='69' h='5975' id='59' type-v2='title' w='98614' x='693' y='1370'>
+            <zone h='100000' id='319' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97260' id='318' param='vert' type-v2='layout-flow' w='98614' x='693' y='1370'>
+                <zone fixed-size='69' h='5974' id='59' type-v2='title' w='98614' x='693' y='1370'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -4119,7 +4526,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='151' h='19890' id='283' is-fixed='true' name=' Total Work Time ' w='22789' x='693' y='10086'>
+                <zone fixed-size='151' h='19890' id='283' is-fixed='true' name=' Total Work Time ' w='22787' x='693' y='10085'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -4128,7 +4535,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='151' h='19890' id='291' is-fixed='true' name='Average Downtime Per Day' w='22801' x='23482' y='10086'>
+                <zone fixed-size='151' h='19890' id='291' is-fixed='true' name='Average Downtime Per Day' w='22801' x='23480' y='10085'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -4137,7 +4544,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='39900' id='288' is-fixed='true' name='downtime vary by work shifts' w='53024' x='46283' y='10086'>
+                <zone fixed-size='280' h='39900' id='288' is-fixed='true' name='downtime vary by work shifts' w='53026' x='46281' y='10085'>
                   <layout-cache cell-count-w='3' minheight='177' type-h='scalable' type-w='cell' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -4147,7 +4554,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='152' h='20010' id='284' is-fixed='true' name='Total Downtime' w='22789' x='693' y='29976'>
+                <zone fixed-size='152' h='20010' id='284' is-fixed='true' name='Total Downtime' w='22787' x='693' y='29975'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -4156,7 +4563,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='152' h='20010' id='292' is-fixed='true' name='# Batches' w='22801' x='23482' y='29976'>
+                <zone fixed-size='152' h='20010' id='292' is-fixed='true' name='# Batches' w='22801' x='23480' y='29975'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -4165,7 +4572,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone h='5353' id='86' name='Line Chart' param='[federated.1wtoffb0r0e0n71byg91202b6gce].[none:Date:qk]' type-v2='filter' values='database' w='98614' x='693' y='49986'>
+                <zone h='5353' id='86' name='Line Chart' param='[federated.1wtoffb0r0e0n71byg91202b6gce].[none:Date:qk]' type-v2='filter' values='database' w='98614' x='693' y='49985'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -4174,7 +4581,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='43291' id='63' is-fixed='true' name='Line Chart' show-title='false' w='98614' x='693' y='55339'>
+                <zone fixed-size='280' h='43292' id='63' is-fixed='true' name='Line Chart' show-title='false' w='98614' x='693' y='55338'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -4249,8 +4656,8 @@
           </layout-options>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='381' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='84000' id='380' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
+            <zone h='100000' id='385' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='384' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
                 <zone fixed-size='65' h='9125' id='9' type-v2='title' w='98400' x='800' y='1000'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -4418,8 +4825,8 @@
           </layout-options>
           <size maxheight='1150' minheight='1150' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='404' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='84000' id='403' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
+            <zone h='100000' id='408' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='407' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
                 <zone h='5625' id='128' type-v2='title' w='98400' x='800' y='1000'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -4748,7 +5155,7 @@
       </viewpoint>
       <simple-id uuid='{34B96AE0-BF08-4FE7-B79D-EC0FEB9B8BA0}' />
     </window>
-    <window class='worksheet' maximized='true' name='# Downtime for each product.' tab-color='#dec77b'>
+    <window class='worksheet' name='# Downtime for each product.' tab-color='#dec77b'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -5374,7 +5781,7 @@
       <active id='-1' />
       <simple-id uuid='{407FFD6C-514F-4107-8397-142104DA78B7}' />
     </window>
-    <window class='dashboard' name='Downtime Cause Analysis' tab-color='#a65200'>
+    <window class='dashboard' maximized='true' name='Downtime Cause Analysis' tab-color='#a65200'>
       <viewpoints>
         <viewpoint name='# Factors'>
           <zoom type='entire-view' />
@@ -5419,7 +5826,7 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='-1' />
+      <active id='78' />
       <simple-id uuid='{F1B818D3-EBC6-48B0-88EA-6FE078E6B52E}' />
     </window>
     <window class='dashboard' name='Downtime Time Series Analysis' tab-color='#f66273'>
@@ -8181,40 +8588,38 @@
     </thumbnail>
     <thumbnail height='192' name='Total Downtime' width='192'>
       iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
-      AAAG7ElEQVR4nO3af2zU9R3H8de3d+Us/UGpB7ZQJxBwEZAJDgMYHTi3ss3NMbZJlk4T1IFz
-      zPCHCQqGLJvEuSy6oBkkOJnOzVGmzM1RKywiWijoRLCsEMBasC2l9He5tte77/4oS9b4965J
-      X8/Hf/fNJ597/3HP7/e+970gDMNQgKmoJCWSaXX0p0Z6FiDjopLU0Z/SsZbESM8CZFx02KuI
-      FAQjNAkwAoYFEARSEKEA+Mga6QGAkUQAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYA
+      AAAGnklEQVR4nO3ab2xVdx3H8c9pL6VQ2tkWsGVg2iKhodIVlb+BAVJdcSPEscZkGERjlMmc
+      mi0GjYZOFxKnAi5ZlA01mXFMNrQhBGwNmwS526CwQlfarWWQlduOFvoH+ofb29vjw7Es8ZG2
+      ST/v17OTnJx8n7zP73dyfkEYhqEAUxFJGkqMqjeeHO9ZgDEXkaTeeFINnUPjPQsw5iIfuUqV
+      gmCcJgHGwUcCCAIpSKUA+EgZ7wGA8UQAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYA
       sEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYA
       sEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYA
       sEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYA
       sEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYA
-      sEYAsBYd6QGA/6dwsE/H392t6rdqlD9lru64a7lSF+q0e8dOtfWEBIDRrf98nfZV12n+kjKd
-      fOM5vfaPqVo4qV0l1y/S52MpvgJhdIuVXK/V69Zpzg0zJWVrYklcUxeUKdX4nqp3v8YVAKNb
-      kBVR45EqvbStQnOXP6gvL5wmSSqZPkf9QT4BYHQbaP23frf1Vd29YZOKr8xXajClhuOHVDz7
-      S5r6hQUEgNGts/GM2j89rid/9F1J0sLyRzQr95S2/myjEoNRBWEYhk09SR1rSSiISkEkGOGR
-      gczhJhjWCADWCADWCAAZEaaTaqh9X0dratR1aWDoWGro2LFDh9TZ0zds/WCiSyf/dUC1Rz5S
-      Mh1KknovntNHNdU6f6FzaE1vm2rfO6zuy/t1n29Qe9fwfT4j3a8P33xVlTsr1N3HXyGQIXu2
-      PKLq4wkVxhJq2l6ijc/+Qge3bVDVoQuaVFyo2X15WnLrzMuru7Rt7X3qLpisVFu98ubfrdUr
-      5uqXD6zSuKkzdO5Mi9ZufU6Ht/9W1y78ona9VKEV99ypqoqXdUv5T4e9bxiGSqfTCoJAQRAo
-      2VavuvZsLV/+LUWyCAAZsqj8MX2lYJz6Our164c2KtF+UlXV7bpv/cPKCsaodNq0/1kdU/mT
-      LygvP6bWo3/V5h1ndWrfx5pUtlar712qw9sf1d6/VaqtKaFlN8zTwT1bdepgleLX3aLExWal
-      CqYokiWFqT7tf+VFdSYi6ksktODbP1DLgT06+f5Z7Y0O6OZvfIcAkBlj8wt0unqXdv7xdS1e
-      s145Pa1qaz2tXVt+o87mT1S8ZLUeuP9ODf0IH1Nubr/e/dNT2ne4Ufeu26iWN36lotKrJUnx
-      SXF1nEhq3qy4/l5RoSunlOpUQ7cuNtUpbM5R3adLVXbrdeptPqFEzgzd8b3FGmg+osqaWn1t
-      0W2qjzSp7Ju3SeIeABny8dvb9Urlaa38+dNadOMMxQonauLkmbp/02Y9uvlxnd3/jpL/XRwO
-      6s1nH9Pp9AytfeIJfe6qfBUVl+hc7VGlUoOqr6vXVaXTtfiHP9Hty1YoP+zX7PnTpDHXaMHi
-      m9Tw4dGhbdJpRSJD5/hINFvpwfRn5uIKgAxIqvL5LWronaynHzqg2LiJWrXpGS29Oa7HV96l
-      MJnQjeUbFDZ+oKee368H13xdf3m5UoXTz+hE1e8Vn/VV/XjNMmnHKq2/589KXzFZD6+cqyAS
-      VdMHe5UqmafSq69R9sBb+ufrZzX9pqGnvnnF1yp8+w96p7JLXc2faM7t35fUMmwyngQjA9Lq
-      aj2vvv5BSVIQiWr8hBJFgpS6WluUVLaKJsSlwT61d15S0fg8XWy5oHR66IwdieWpKD5eg4lu
-      dbR3aWxhXLljY5KkRHeHIjkFGhMN1NfTod5LKY2fEFfW5Y9xKplQR2ubsnMLlZ+fK6WTSgyk
-      NDbniqFZCADOuAeANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKA
-      NQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKA
-      NQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKA
-      NQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKA
-      NQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKANQKAtf8A0XPiTRAd
-      6WQAAAAASUVORK5CYII=
+      sEYAsBYZ7wGA/6dw5LYunjqm6L/eVGbBIj3w1U1KdjXr2MFX1N0fEgAmtvi1Zp2INmvx2vv0
+      bs0fdPhooZbP6lH+whWaPznJFggT2+T8hdq2Y4dKyxZImqSZ+dNVuOw+JdvrFD12mBUAE1uQ
+      kqr2+lr9Zf/LWrRpu9YtL5Ik5X+6VPEgkwAwsQ1fb9If9/1dW366S3m5mUqOJPX+xdPK+8xq
+      Fd6zjAAwsfW1v6ee2EU9/e2HJEnLv/ZjlWS0at+TOzU0ElEQhmHY0Z9QQ+eQgogUpAbjPDIw
+      dvgIhjUCgDUCgDUCgJlQNz+4rLfP1ul2ggAwRi6fPqKfb67Qtoov6KVDxxWGoTqbTujJzRV6
+      ZH25Xnu95Y67E4oe2KMnNq7W9gcf1JnzVxSGcR3d87i+W7FSe5/er/hoqMbal/TX5/bq5Kl6
+      hWFS0YO/V2tb73+dY3SgQzVHTyorO0epAWeBMEb6bsa19VcHlJ81qF98/THdqCjT/l3P6CtV
+      f1JJYbb6byXuuHtQyUiRfvZirUav1GrX8y/qUw8XKdqWq19X16h65zf1z1cXqOX42/r+zu/p
+      ud/sV/GsUV0PCrVs9ic+fEw4qo7mM6o/16gpM+dq6erlaqw5pKam9zUta4py7i5iBcDYKCvf
+      pLtzUvTqn/dpxooNmtrdqlj/kKqf+o52fONbutR+55v7Lq2q3KjIYEx/e6Faq+6vUOzdZpWs
+      u19T0zO0ZM1iXXrnkqalhbp5q0+RjEyd/3edgoFWHXx2jy5/cEuSNNzXptfrWrW2covmZvUq
+      eqZFpSvLVXLveq1/qFLTJrMFwhi5fb1Fzzz+mIbnrNO2H2zRpEhEGTPn6dG9L+iHT1TqwO7f
+      6cM1IFTs3FHt3vlLlW3+iTaUf1aRSWkaHhqUJA0PxZWWnquHt2/VmyfOakFhtqYWzlFXT4Y2
+      fLlMx6uPS5IGe65pen6x0tMiml1SqpttHR+biwAwBkZ1ePePlL6gXDPSh1R/6qQS2cUqisRU
+      e6RGF06f07S8WdJAl+rrLigZ79LzT/1WZV96QInOFp1/q1EFS9fowsG9eu3IIb38SlRLVi1R
+      Rt48rVx1j67eSlPp/AIlRwbU39entMxMSVJG7ix1tTVoMJ7Qe2/VKadw9scmS62qqqrqHx5V
+      58CIghQpSOFPMP7XRtRzrUu9nTF1tV9Vd3ev5i66V59fvUKx86fUE+Zr8yNblXa7U9E3mjS/
+      eI6u37ihno42dbVf1WByqhauXKvigiw1nG3Q4spHtbi0QEEgxd5pUOHn1ih3ep4yU7rVeCWu
+      L26sUPqkFKWmZeqT2RG9UfsPJe6ap6VLFiolkBSZopkzciSJoxDwxhYI1ggA1ggA1ggA1ggA
+      1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA
+      1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA
+      1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA
+      1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA
+      1ggA1ggA1ggA1ggA1ggA1ggA1ggA1v4DJ6mnzSEnCbQAAAAASUVORK5CYII=
     </thumbnail>
     <thumbnail height='192' name='downtime vary by work shifts' width='192'>
       iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
