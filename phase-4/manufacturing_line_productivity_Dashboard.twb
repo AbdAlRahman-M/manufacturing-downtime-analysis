@@ -3243,7 +3243,7 @@
         </view>
         <style>
           <style-rule element='axis'>
-            <encoding attr='space' class='0' field='[federated.1wtoffb0r0e0n71byg91202b6gce].[usr:Calculation_702843074670829569:qk]' field-type='quantitative' fold='true' major-origin='0.0' major-spacing='0.2' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.1wtoffb0r0e0n71byg91202b6gce].[usr:Calculation_702843074670829569:qk]' field-type='quantitative' fold='true' major-origin='0.0' major-spacing='0.20000000000000001' scope='rows' type='space' />
             <encoding attr='space' class='0' field='[federated.1wtoffb0r0e0n71byg91202b6gce].[sum:Minutes:qk]' field-type='quantitative' max='350' min='0' range-type='fixed' scope='rows' type='space' />
             <format attr='width' field='[federated.1wtoffb0r0e0n71byg91202b6gce].[sum:Minutes:qk]' value='62' />
             <format attr='width' field='[federated.1wtoffb0r0e0n71byg91202b6gce].[usr:Calculation_702843074670829569:qk]' value='62' />
@@ -4081,8 +4081,8 @@
           </layout-options>
           <size maxheight='2100' minheight='2100' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='416' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='84000' id='415' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
+            <zone h='100000' id='418' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='417' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
                 <zone fixed-size='29' h='4625' id='20' type-v2='title' w='98400' x='800' y='1000'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -4193,13 +4193,13 @@
                     </zone-style>
                   </zone>
                   <zone fixed-size='106' h='18151' id='163' is-fixed='true' type-v2='layout-basic' w='98614' x='693' y='10788'>
-                    <zone h='18151' id='116' param='horz' type-v2='layout-flow' w='62392' x='693' y='10788'>
-                      <zone fixed-size='504' h='18151' id='117' is-fixed='true' param='horz' type-v2='layout-flow' w='62392' x='693' y='10788'>
-                        <zone fixed-size='541' h='18151' id='118' is-fixed='true' param='horz' type-v2='layout-flow' w='62392' x='693' y='10788' />
+                    <zone h='18151' id='116' param='horz' type-v2='layout-flow' w='62390' x='693' y='10788'>
+                      <zone fixed-size='504' h='18151' id='117' is-fixed='true' param='horz' type-v2='layout-flow' w='62390' x='693' y='10788'>
+                        <zone fixed-size='541' h='18151' id='118' is-fixed='true' param='horz' type-v2='layout-flow' w='62390' x='693' y='10788' />
                       </zone>
                     </zone>
-                    <zone h='18151' id='164' param='horz' type-v2='layout-flow' w='36222' x='63085' y='10788'>
-                      <zone fixed-size='418' h='18151' id='119' is-fixed='true' param='horz' type-v2='layout-flow' w='36222' x='63085' y='10788' />
+                    <zone h='18151' id='164' param='horz' type-v2='layout-flow' w='36224' x='63083' y='10788'>
+                      <zone fixed-size='418' h='18151' id='119' is-fixed='true' param='horz' type-v2='layout-flow' w='36224' x='63083' y='10788' />
                     </zone>
                   </zone>
                   <zone h='69691' id='7' param='horz' type-v2='layout-flow' w='98614' x='693' y='28939'>
@@ -4262,8 +4262,8 @@
           </layout-options>
           <size maxheight='1850' minheight='1850' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='280' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97260' id='279' param='vert' type-v2='layout-flow' w='98614' x='693' y='1370'>
+            <zone h='100000' id='282' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97260' id='281' param='vert' type-v2='layout-flow' w='98614' x='693' y='1370'>
                 <zone fixed-size='47' h='9418' id='10' type-v2='title' w='98614' x='693' y='1370'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -4408,7 +4408,7 @@
         <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
           <zone h='97260' id='290' param='horz' type-v2='layout-flow' w='98614' x='693' y='1370'>
             <zone h='97260' id='83' type-v2='layout-basic' w='98614' x='693' y='1370'>
-              <zone h='43300' id='63' name='Line Chart' show-title='false' w='98614' x='693' y='55330'>
+              <zone h='43305' id='63' name='Line Chart' show-title='false' w='98614' x='693' y='55325'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -4416,7 +4416,7 @@
                   <format attr='margin' value='4' />
                 </zone-style>
               </zone>
-              <zone h='5353' id='86' name='Line Chart' param='[federated.1wtoffb0r0e0n71byg91202b6gce].[none:Date:qk]' type-v2='filter' values='database' w='98614' x='693' y='49977'>
+              <zone h='5353' id='86' name='Line Chart' param='[federated.1wtoffb0r0e0n71byg91202b6gce].[none:Date:qk]' type-v2='filter' values='database' w='98614' x='693' y='49972'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -4424,7 +4424,7 @@
                   <format attr='margin' value='4' />
                 </zone-style>
               </zone>
-              <zone fixed-size='69' h='5964' id='59' is-fixed='true' type-v2='title' w='98614' x='693' y='1370'>
+              <zone fixed-size='69' h='5958' id='59' is-fixed='true' type-v2='title' w='98614' x='693' y='1370'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -4432,7 +4432,7 @@
                   <format attr='margin' value='4' />
                 </zone-style>
               </zone>
-              <zone h='19890' id='283' name=' Total Work Time ' w='22781' x='693' y='10077'>
+              <zone h='19890' id='283' name=' Total Work Time ' w='22776' x='693' y='10072'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -4440,8 +4440,8 @@
                   <format attr='margin' value='4' />
                 </zone-style>
               </zone>
-              <zone h='39900' id='287' param='horz' type-v2='layout-flow' w='53033' x='46274' y='10077'>
-                <zone h='39900' id='288' name='downtime vary by work shifts' w='53033' x='46274' y='10077'>
+              <zone h='39900' id='287' param='horz' type-v2='layout-flow' w='53036' x='46271' y='10072'>
+                <zone h='39900' id='288' name='downtime vary by work shifts' w='53036' x='46271' y='10072'>
                   <layout-cache cell-count-w='3' minheight='177' type-h='scalable' type-w='cell' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -4451,7 +4451,7 @@
                   </zone-style>
                 </zone>
               </zone>
-              <zone h='19890' id='291' name='Average Downtime Per Day' w='22800' x='23474' y='10077'>
+              <zone h='19890' id='291' name='Average Downtime Per Day' w='22802' x='23469' y='10072'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -4459,7 +4459,7 @@
                   <format attr='margin' value='4' />
                 </zone-style>
               </zone>
-              <zone h='20010' id='292' name='# Batches' w='22800' x='23474' y='29967'>
+              <zone h='20010' id='292' name='# Batches' w='22802' x='23469' y='29962'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -4467,7 +4467,7 @@
                   <format attr='margin' value='4' />
                 </zone-style>
               </zone>
-              <zone h='20010' id='284' name='Total Downtime' w='22781' x='693' y='29967'>
+              <zone h='20010' id='284' name='Total Downtime' w='22776' x='693' y='29962'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -4507,9 +4507,9 @@
           </layout-options>
           <size maxheight='1550' minheight='1550' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='323' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97260' id='322' param='vert' type-v2='layout-flow' w='98614' x='693' y='1370'>
-                <zone fixed-size='69' h='5964' id='59' type-v2='title' w='98614' x='693' y='1370'>
+            <zone h='100000' id='325' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97260' id='324' param='vert' type-v2='layout-flow' w='98614' x='693' y='1370'>
+                <zone fixed-size='69' h='5958' id='59' type-v2='title' w='98614' x='693' y='1370'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -4544,7 +4544,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='151' h='19890' id='283' is-fixed='true' name=' Total Work Time ' w='22781' x='693' y='10077'>
+                <zone fixed-size='151' h='19890' id='283' is-fixed='true' name=' Total Work Time ' w='22776' x='693' y='10072'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -4553,7 +4553,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='151' h='19890' id='291' is-fixed='true' name='Average Downtime Per Day' w='22800' x='23474' y='10077'>
+                <zone fixed-size='151' h='19890' id='291' is-fixed='true' name='Average Downtime Per Day' w='22802' x='23469' y='10072'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -4562,7 +4562,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='39900' id='288' is-fixed='true' name='downtime vary by work shifts' w='53033' x='46274' y='10077'>
+                <zone fixed-size='280' h='39900' id='288' is-fixed='true' name='downtime vary by work shifts' w='53036' x='46271' y='10072'>
                   <layout-cache cell-count-w='3' minheight='177' type-h='scalable' type-w='cell' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -4572,7 +4572,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='152' h='20010' id='284' is-fixed='true' name='Total Downtime' w='22781' x='693' y='29967'>
+                <zone fixed-size='152' h='20010' id='284' is-fixed='true' name='Total Downtime' w='22776' x='693' y='29962'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -4581,7 +4581,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='152' h='20010' id='292' is-fixed='true' name='# Batches' w='22800' x='23474' y='29967'>
+                <zone fixed-size='152' h='20010' id='292' is-fixed='true' name='# Batches' w='22802' x='23469' y='29962'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -4590,7 +4590,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone h='5353' id='86' name='Line Chart' param='[federated.1wtoffb0r0e0n71byg91202b6gce].[none:Date:qk]' type-v2='filter' values='database' w='98614' x='693' y='49977'>
+                <zone h='5353' id='86' name='Line Chart' param='[federated.1wtoffb0r0e0n71byg91202b6gce].[none:Date:qk]' type-v2='filter' values='database' w='98614' x='693' y='49972'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -4599,7 +4599,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='43300' id='63' is-fixed='true' name='Line Chart' show-title='false' w='98614' x='693' y='55330'>
+                <zone fixed-size='280' h='43305' id='63' is-fixed='true' name='Line Chart' show-title='false' w='98614' x='693' y='55325'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -4674,8 +4674,8 @@
           </layout-options>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='389' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='84000' id='388' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
+            <zone h='100000' id='391' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='390' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
                 <zone fixed-size='65' h='9125' id='9' type-v2='title' w='98400' x='800' y='1000'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -4843,8 +4843,8 @@
           </layout-options>
           <size maxheight='1150' minheight='1150' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='412' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='84000' id='411' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
+            <zone h='100000' id='414' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='413' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
                 <zone h='5625' id='128' type-v2='title' w='98400' x='800' y='1000'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -5826,7 +5826,7 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='179' />
+      <active id='78' />
       <simple-id uuid='{F1B818D3-EBC6-48B0-88EA-6FE078E6B52E}' />
     </window>
     <window class='dashboard' name='Downtime Time Series Analysis' tab-color='#f66273'>
@@ -5850,7 +5850,7 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='86' />
+      <active id='63' />
       <simple-id uuid='{D6682E76-B37A-4C6E-A7B3-924F4E58BD82}' />
     </window>
   </windows>
